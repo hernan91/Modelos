@@ -1,0 +1,30 @@
+Los talleres de mantenimiento 6h, 24h y 48h se encuentran todos luego de la trituradora. El motivo es que la maquinaria de mantenimiento debe encontrarse en un mismo lugar, lo cual, estratégicamente trae grandes beneficios. Entre estos beneficios
+    -Los camiones siempre llegan descargados.
+    -Existe un solo taller centralizado, por lo que los costos de hacer 8 talleres se reducen.
+
+Se utilizan objetos de tipo ExpressionEntity para calcular valores útiles dentro del modelo, tanto como todos los tiempos que demoran los camiones al recorrer los caminos, los cuales son constantes.
+
+Se considero que el modelo debe funcionar incluso durante la noche porque el mantenimiento no puede retrasar toda la operacion de minado. Las reparaciones deben llevarse a cabo por turnos durante las horas que sean necesarias
+
+Se calculo el tiempo que tarda en ir y volver de un camion en el peor de los casos resulto de 23.36min. Es el resultado de la sumatoria de la ida y vuelta de el cerro redondo ( el peor caso) y de el valor medio de la distribucion de duracion de la carga de la pala. (Esto te lo habia dicho Pablo). Esto se va a usar para calcular el tiempo de pre cierre, que la cantidad de tiempo antes de que la salida de los camiones desde la trituradora hacia los cerros se detenga para evitar que los camiones lleguen despues de las 8.
+(8[h]-[TiempoCargadoCerroCalera].Value+[TiempoVacioCerroCalera].Value)+[DistribucionCargaPalas].CalculatedMean
+
+[HorarioDescanso].PresentValue==1?1:([EstadoMantenimientoPreventivo6h].Open||[EstadoMantenimientoPreventivo12h].Open||[EstadoMantenimientoPreventivo24h].Open?2:3)
+
+(8[h]-[TiempoCargadoCerroCalera].Value+[TiempoVacioCerroCalera].Value)+[DistribucionCargaPalas].CalculatedMean
+
+
+
+Va a haber un branch a la salida del EntityCreator que tenga una variable con un contador que use un mod para calcular y asignar a cada objeto su nuumero de camino.
+Check.
+Va a haber una cola con un thershold que se encargue de poner en espera a todos los camiones cuando termina el laburo.
+Check
+Cada cola, procesador, etc. debe tener un thereshold que le indique que ya se termino el horario de trabajo para que no tome malas mediciones de la ociosidad y esas cosas.
+
+Faltan los fallos no programados en los camiones
+
+Hay un problema con el branch y el assigner. El assigner asigna 0 y el branch no tiene puta idea de que hacer 
+
+[HorarioTrabajo].PresentValue?1:([EstadoMantenimientoPreventivo6h].Open||[EstadoMantenimientoPreventivo12h].Open||[EstadoMantenimientoPreventivo24h].Open?2:3)
+
+
