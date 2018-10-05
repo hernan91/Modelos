@@ -25,6 +25,14 @@ Faltan los fallos no programados en los camiones
 
 Hay un problema con el branch y el assigner. El assigner asigna 0 y el branch no tiene puta idea de que hacer 
 
-[HorarioTrabajo].PresentValue?1:([EstadoMantenimientoPreventivo6h].Open||[EstadoMantenimientoPreventivo12h].Open||[EstadoMantenimientoPreventivo24h].Open?2:3)
+([EstadoMantenimientoPreventivo6h].Open||[EstadoMantenimientoPreventivo12h].Open||[EstadoMantenimientoPreventivo24h].Open)
+?3:
+[EstadoMinaDescanso].Open
+?2:
+[EstadoMinaTrabaja].Open
+?1:0
 
-
+'([EstadoMantenimientoPreventivo6h].Open||[EstadoMantenimientoPreventivo12h].Open||[EstadoMantenimientoPreventivo24h].Open) 
+?3: ([EstadoMinaInactiva].Open 
+?2: ([EstadoMinaAbierta].Open 
+?1:0) )'
