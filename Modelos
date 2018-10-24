@@ -1,4 +1,4 @@
-Los talleres de mantenimiento 6h, 24h y 48h se encuentran todos luego de la trituradora. El motivo es que la maquinaria de mantenimiento debe encontrarse en un mismo lugar, lo cual, estratégicamente trae grandes beneficios. Entre estos beneficios
+﻿Los talleres de mantenimiento 6h, 24h y 48h se encuentran todos luego de la trituradora. El motivo es que la maquinaria de mantenimiento debe encontrarse en un mismo lugar, lo cual, estratégicamente trae grandes beneficios. Entre estos beneficios
     -Los camiones siempre llegan descargados.
     -Existe un solo taller centralizado, por lo que los costos de hacer 8 talleres se reducen.
 
@@ -36,3 +36,12 @@ Hay un problema con el branch y el assigner. El assigner asigna 0 y el branch no
 ?3: ([EstadoMinaInactiva].Open 
 ?2: ([EstadoMinaAbierta].Open 
 ?1:0) )'
+
+Se puso un assign en cada servidor, de modo que si no se finaliza una operacion como llenado o vaciado, quede constancia.
+De vaciado siempre se van a realizar, aunque se haya sobrepasado el tiempo.
+De llenado solo se realizaran la mina esta activa.
+No se entiende porque los camiones vacios van a la cola del procesador como si estuviesen llenos.
+
+-Existe un problema con el descanso y los expression. Los camiones pasan 2 horas por dia en refrigerio, esto se debe a que el expressionEntity estado mina descanso no esta funcionando del todo bien, se necesita otro mecanismo.
+-Se necesita otro mecanismo para el tema de si los camiones salen o no salen en tiempo de descanso, tiene que ser mas preciso.
+-Falta resolver el tema de los fallos no programados para toda la maquinaria.

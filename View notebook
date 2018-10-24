@@ -1,0 +1,15 @@
+# *** View ***
+
+View1 Description { 'Default view window' }
+View1 ViewCenter { 0.026913  0.00115  0.022352  km }
+View1 ViewPosition { 0.026913  0.00115  0.03101  km }
+View1 WindowSize { 1056  415 }
+View1 WindowPosition { 222  107 }
+View1 ShowWindow { TRUE }
+View1 Lock2D { TRUE }
+View1 SkyboxImage { <res>/images/sky_map_2048x1024.jpg }
+
+View2 ViewCenter { 29.254764  0.444861  21.009190  m }
+View2 ViewPosition { 29.254764  0.444861  29.669443  m }
+View2 WindowPosition { 270  134 }
+View2 ShowWindow { FALSE }

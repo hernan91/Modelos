@@ -1,0 +1,25 @@
+Validation Error - WeibullDistribution1: An input must be provided for the keyword 'UnitType'.
+EXCEPTION AT TIME: 0.000000 s
+DistribucionIntervaloFallasNoProgramadas: Could not find a sample value that was within the range specified by the MinValue and MaxValue inputs.
+Number of samples tested = 1000
+Thrown exception call stack:
+com.jaamsim.basicsim.Entity.error(Entity.java:624)
+com.jaamsim.ProbabilityDistributions.Distribution.getNextSample(Distribution.java:200)
+com.jaamsim.BasicObjects.DowntimeEntity.getNextDowntimeIAT(DowntimeEntity.java:418)
+com.jaamsim.BasicObjects.DowntimeEntity.lateInit(DowntimeEntity.java:161)
+com.jaamsim.basicsim.InitModelTarget.process(InitModelTarget.java:40)
+com.jaamsim.events.EventManager.executeTarget(EventManager.java:183)
+com.jaamsim.events.EventManager.execute(EventManager.java:264)
+com.jaamsim.events.Process.run(Process.java:101)
+EXCEPTION AT TIME: 0.000000 s
+DistribucionIntervaloFallasNoProgramadas: Could not find a sample value that was within the range specified by the MinValue and MaxValue inputs.
+Number of samples tested = 1000
+Thrown exception call stack:
+com.jaamsim.basicsim.Entity.error(Entity.java:624)
+com.jaamsim.ProbabilityDistributions.Distribution.getNextSample(Distribution.java:200)
+com.jaamsim.BasicObjects.DowntimeEntity.getNextDowntimeIAT(DowntimeEntity.java:418)
+com.jaamsim.BasicObjects.DowntimeEntity.lateInit(DowntimeEntity.java:161)
+com.jaamsim.basicsim.InitModelTarget.process(InitModelTarget.java:40)
+com.jaamsim.events.EventManager.executeTarget(EventManager.java:183)
+com.jaamsim.events.EventManager.execute(EventManager.java:264)
+com.jaamsim.events.Process.run(Process.java:101)
