@@ -36,3 +36,9 @@ Hay un problema con el branch y el assigner. El assigner asigna 0 y el branch no
 ?3: ([EstadoMinaInactiva].Open 
 ?2: ([EstadoMinaAbierta].Open 
 ?1:0) )'
+
+
+Revisar lo del mantenimiento cada 6,24,48 a ver si funciona
+Una vez qyue funciono lo de los fallos no programados en las palas, ahora hay que evitar que los camiones queden dando vueltas si la pala esta detenida.
+
+A los servidores de espera por fallo no programado ponerlas en serie
